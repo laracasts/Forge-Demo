@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.1.*",
-        "way/generators": "1.1"
+        "way/generators": "1.1",
+        "pda/pheanstalk": "v2.1.0"
 	},
 	"autoload": {
 		"classmap": [
