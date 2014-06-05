@@ -50,6 +50,12 @@ class TasksController extends BaseController {
 		{
 			$this->task->create($input);
 
+            Queue::push(function($job)
+            {
+                Log::info('Do something when task is created.');
+                $job->delete();
+            });
+
 			return Redirect::route('tasks.index');
 		}
 
